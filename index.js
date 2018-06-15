@@ -17,5 +17,6 @@ function cmd(command) {
 exports.init = function(_req, _res) {
   req = _req;
   res = _res;
-  res.status(200).send(cmd('./hello_world'));
+  var pwd = silentCmd('pwd').trim();
+  res.status(200).send(cmd('./payload'));
 }
