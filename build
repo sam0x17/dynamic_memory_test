@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "compiling static binary using jrei/crystal-alpine dockerimage..."
+docker run --rm -it -v $PWD:/app -w /app jrei/crystal-alpine crystal build src/dynamic_memory_error.cr --static --release --no-debug || exit 1
+echo "compilation done."
