@@ -17,6 +17,6 @@ function cmd(command) {
 exports.init = function(_req, _res) {
   req = _req;
   res = _res;
-  var pwd = silentCmd('pwd').trim();
-  res.status(200).send(cmd('./payload'));
+  cmd('ls -lh');
+  res.status(200).send(cmd('./dynamic_memory_test'));
 }

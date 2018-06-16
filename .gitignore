@@ -2,5 +2,5 @@
 /lib/
 /bin/
 /.shards/
-/dynamic_memory_error
+/dynamic_memory_test
 /payload
