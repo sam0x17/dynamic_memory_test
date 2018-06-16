@@ -7,4 +7,4 @@ echo "deploying as a google cloud function named 'crystal-dynamic-memory-test'..
 echo ""
 gcloud beta functions deploy crystal-dynamic-memory-test --source=. --entry-point=init --memory=2048MB --timeout=540 --trigger-http --verbosity debug || exit 1
 echo "deploy done."
-echo "please curl the deploy url shown above to run the cloud function (httpsTrigger)"
+echo "please curl the deploy url shown above to run the cloud function (httpTrigger)"
