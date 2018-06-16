@@ -14,7 +14,7 @@ allocations do not crash when running in Google Cloud Functions.
 7. in the repo, run `./build_deploy`. The crystal alpine linux docker image will be used to compile a static binary
    of the `src/dynamic_memory_test.cr` crystal file. Then this binary will be deployed as a google cloud function
    called `crystal-dynamic-memory-test`.
-8. Wait about a minute for the function to initialize. There seems to be a ~1 minute cool down time during which
+8. Wait about a minute for the function to initialize. There seems to be a ~1-2 minute cool down time during which
    requests to the cloud function will error out.
 9. curl the http trigger for the cloud function url (displayed as the value of `httpTrigger` in step 7). If everything
    works correctly, you should get output like this:
@@ -24,7 +24,6 @@ $ curl https://us-central1-project-id.cloudfunctions.net/crystal-dynamic-memory-
 dynamic memory test starting...
 creating 400 MB of random Int32s...
 dynamic memory test completed without crashing
-
 ```
 
 That's it!
